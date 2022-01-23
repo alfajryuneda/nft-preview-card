@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg);
+  padding: 1.5em;
+  color: hsl(0, 0%, 100%, 65%);
+}
+
+.container {
+  font-size: 18px;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  width: 450px;
+  margin: 1rem auto 1rem;
+}
+
+.container .main-image {
+  position: relative;
+}
+
+.container .main-image div {
+  position: absolute;
+  height: calc(100% - 5px);
+  width: 100%;
+  background-color: hsl(178, 100%, 50%, 75%);
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.container .main-image div img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .main-image div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container h2 {
+  color: white;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+}
+
+.container h2:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.container p {
+  font-weight: 400;
+  margin: 1rem 0 0.5rem;
+}
+
+.container ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 1.5rem;
+}
+
+.container li {
+  display: flex;
+}
+
+.container li:first-child {
+  color: var(--cyan);
+}
+
+.container li img {
+  margin-right: 0.5rem;
+}
+
+.container .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.container .avatar img {
+  width: 4rem;
+  margin-right: 1.25rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.container .avatar span {
+  color: var(--white);
+}
+
+.container .avatar span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
